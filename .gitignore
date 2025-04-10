@@ -37,3 +37,10 @@ htmlcov/
 *.gcda
 *.gcno
 *.gcov" > .gitignore
+# Ignore PyCharm project files
+.idea/
+
+# Ignore compiled Python files
+Todo_List/__pycache__/
+Todo_listManager/__pycache__/
+
