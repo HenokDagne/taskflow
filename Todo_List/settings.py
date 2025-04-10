@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
+from decouple import config
+
 import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -84,11 +86,11 @@ WSGI_APPLICATION = 'Todo_List.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'Todo_list',
-        'USER': 'postgres',
-        'PASSWORD': '@Hd36As85',
-        'HOST': 'localhost',
-        'PORT': '5432',
+        'NAME': config('DB_Name'),
+        'USER': config('DB_User'),
+        'PASSWORD': config('Password'),
+        'HOST': config('Host'),
+        'PORT': config('Port'),
     }
 }
 
